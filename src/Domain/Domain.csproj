@@ -8,8 +8,4 @@
         <RootNamespace>Wishlist.Domain</RootNamespace>
         <AssemblyName>Wishlist.Domain</AssemblyName>
     </PropertyGroup>
-
-    <ItemGroup>
-      <Folder Include="ValueObjects\" />
-    </ItemGroup>
 </Project>
