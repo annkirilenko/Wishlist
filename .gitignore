@@ -1,0 +1,6 @@
+[Bb]in/
+[Oo]bj/
+**/[Pp]ackages/*
+riderModule.iml
+_ReSharper*/
+.DS_Store

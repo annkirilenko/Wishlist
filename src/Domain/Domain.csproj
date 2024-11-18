@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>dotnet-Domain-c6bc0a89-52d6-47a6-a8ca-1a7118b90ba6</UserSecretsId>
+        <RootNamespace>Wishlist.Domain</RootNamespace>
+        <AssemblyName>Wishlist.Domain</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="ValueObjects\" />
+    </ItemGroup>
+</Project>
