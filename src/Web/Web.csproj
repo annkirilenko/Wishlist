@@ -9,5 +9,9 @@
         <RootNamespace>Wishlist.Web</RootNamespace>
         <AssemblyName>Wishlist.Web</AssemblyName>
     </PropertyGroup>
+    
+    <ItemGroup>
+        <ProjectReference Include="..\Application\Application.csproj" />
+    </ItemGroup>
 
 </Project>
