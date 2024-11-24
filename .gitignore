@@ -4,3 +4,4 @@
 riderModule.iml
 _ReSharper*/
 .DS_Store
+**/coverage/*
