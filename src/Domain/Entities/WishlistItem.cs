@@ -14,4 +14,8 @@ public class WishlistItem
     public DateTimeOffset CreatedAt { get; set; }
     public DateTimeOffset? UpdatedAt { get; set; }
     public DateTimeOffset? DeletedAt { get; set; }
+    
+    public List<WishlistItemImage> Images { get; set; } = new List<WishlistItemImage>();
+
+    public Reservation? Reservation { get; set; } = null;
 }

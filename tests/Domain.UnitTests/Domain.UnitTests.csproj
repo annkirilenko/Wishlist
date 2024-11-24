@@ -8,6 +8,10 @@
         <RootNamespace>Wishlist.Domain.UnitTests</RootNamespace>
         <AssemblyName>Wishlist.Domain.UnitTests</AssemblyName>
     </PropertyGroup>
+    
+    <ItemGroup>
+        <ProjectReference Include="..\..\src\Domain\Domain.csproj" />
+    </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="coverlet.collector" Version="6.0.2"/>
