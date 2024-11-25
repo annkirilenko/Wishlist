@@ -7,7 +7,7 @@ public class WishlistItemImageData
 
     public WishlistItemImageData(string filename, string mimeType)
     {
-        Filename = filename;
-        MimeType = mimeType;
+        Filename = filename.Trim();
+        MimeType = mimeType.Trim().ToLower();
     }
 }

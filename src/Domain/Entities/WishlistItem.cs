@@ -10,16 +10,16 @@ public class WishlistItem
     
     public Guid Id { get; }
     public Guid WishlistId { get; }
-    public WishlistItemStatus Status { get; }
-    public bool Visible { get; set; }
-    public required string Title { get; set; }
+    public WishlistItemStatus Status { get; private set; }
+    public bool Visible { get; private set; }
+    public string Title { get; set; }
     public string? Description { get; set; }
     public string? Link { get; set; }
     public DateTimeOffset CreatedAt { get; }
-    public DateTimeOffset? UpdatedAt { get; set; }
-    public DateTimeOffset? DeletedAt { get; set; }
+    public DateTimeOffset? UpdatedAt { get; private set; }
+    public DateTimeOffset? DeletedAt { get; private set; }
     
-    public List<WishlistItemImage> Images { get; set; }
+    public List<WishlistItemImage> Images { get; private set; }
 
     public Reservation? Reservation { get; set; }
 
@@ -27,8 +27,7 @@ public class WishlistItem
         Guid wishlistId, 
         string title, 
         string? description = null, 
-        string? link = null,
-        List<WishlistItemImage>? images = null
+        string? link = null
         )
     {
         Id = Guid.NewGuid();
@@ -39,7 +38,7 @@ public class WishlistItem
         Description = description;
         Link = link;
         CreatedAt = DateTimeOffset.Now;
-        Images = images ?? new List<WishlistItemImage>();
+        Images = new List<WishlistItemImage>();
     }
 
     public void AddImage(WishlistItemImageData data)
@@ -51,5 +50,7 @@ public class WishlistItem
 
         WishlistItemImage image = new WishlistItemImage(Id, data.Filename, data.MimeType);
         Images.Add(image);
+        
+        UpdatedAt = DateTimeOffset.Now;
     }
 }

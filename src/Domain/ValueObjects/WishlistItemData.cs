@@ -14,9 +14,9 @@ public sealed class WishlistItemData
         List<WishlistItemImageData>? images = null
         )
     {
-        Title = title;
-        Description = description;
-        Link = link;
+        Title = title.Trim();
+        Description = description?.Trim();
+        Link = link?.Trim();
         Images = images ?? new List<WishlistItemImageData>();
     }
 }
