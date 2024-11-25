@@ -1,6 +1,6 @@
 namespace Wishlist.Domain.Exceptions;
 
-public sealed class WishlistAlreadyExistsException : Exception
+public sealed class WishlistAlreadyExistsException : DomainException
 {
     public WishlistAlreadyExistsException()
     {

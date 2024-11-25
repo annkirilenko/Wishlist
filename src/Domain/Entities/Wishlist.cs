@@ -1,3 +1,5 @@
+using Wishlist.Domain.ValueObjects;
+
 namespace Wishlist.Domain.Entities;
 
 public class Wishlist
@@ -17,18 +19,8 @@ public class Wishlist
         Items = new List<WishlistItem>();  
     }
 
-    public Wishlist(
-        Guid id, 
-        Guid ownerId, 
-        DateTimeOffset createdAt, 
-        DateTimeOffset? updatedAt,
-        List<WishlistItem>? items = null
-        ) : base()
+    public void AddItem(WishlistItemData data)
     {
-        Id = id;
-        OwnerId = ownerId;
-        CreatedAt = createdAt;
-        UpdatedAt = updatedAt;
-        Items = items ?? new List<WishlistItem>();
+        
     }
 }
